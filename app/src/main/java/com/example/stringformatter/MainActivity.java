@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import static com.example.stringformatter.Stack.reverse;
+
 public class MainActivity extends AppCompatActivity {
 EditText editTextTextPersonName;
     @Override
@@ -12,6 +14,11 @@ EditText editTextTextPersonName;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
-        editTextTextPersonName.setText(StringFormatter.reverseWord("tamer"));
+
+        StringBuffer s= new StringBuffer("abc");
+
+        reverse(s);
+        System.out.println(s);
+        editTextTextPersonName.setText(""+s);
     }
 }
